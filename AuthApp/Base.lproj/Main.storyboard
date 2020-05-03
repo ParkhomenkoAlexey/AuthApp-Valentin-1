@@ -39,21 +39,33 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldsChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="4hA-XA-kFB"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UnT-4v-i7R">
                                         <rect key="frame" x="0.0" y="60" width="382" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldsChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="JLN-DG-AkC"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fSU-1G-n0d">
                                         <rect key="frame" x="0.0" y="120" width="382" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldsChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="yqp-fJ-swL"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1h-G0-eFs">
                                         <rect key="frame" x="0.0" y="180" width="382" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="textFieldsChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="UPb-MQ-mNI"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xc-h0-e1l">
                                         <rect key="frame" x="0.0" y="240" width="382" height="50"/>
@@ -96,6 +108,7 @@
                         <outlet property="passwordTextField" destination="E1h-G0-eFs" id="9Dy-xK-1ER"/>
                         <outlet property="photoButton" destination="92w-El-kOY" id="Jzg-se-Vnr"/>
                         <outlet property="photoImageView" destination="FaT-Hb-piY" id="FP3-cj-ojr"/>
+                        <outlet property="registerButton" destination="7xc-h0-e1l" id="20P-Dx-ePs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

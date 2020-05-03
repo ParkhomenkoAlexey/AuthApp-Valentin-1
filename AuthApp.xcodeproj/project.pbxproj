@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F06AEA01245EA1FB00875DB5 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AEA00245EA1FB00875DB5 /* Validators.swift */; };
 		F072403E24594FCE00937E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F072403D24594FCE00937E8F /* AppDelegate.swift */; };
 		F072404024594FCE00937E8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F072403F24594FCE00937E8F /* SceneDelegate.swift */; };
 		F072404524594FCE00937E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F072404324594FCE00937E8F /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F06AEA00245EA1FB00875DB5 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		F072403A24594FCE00937E8F /* AuthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F072403D24594FCE00937E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F072403F24594FCE00937E8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				F072403F24594FCE00937E8F /* SceneDelegate.swift */,
 				F0724051245950A300937E8F /* SignUpViewController.swift */,
 				F0724053245950B100937E8F /* ProfileViewController.swift */,
+				F06AEA00245EA1FB00875DB5 /* Validators.swift */,
 				F072404324594FCE00937E8F /* Main.storyboard */,
 				F072404624594FD100937E8F /* Assets.xcassets */,
 				F072404824594FD100937E8F /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				F072403E24594FCE00937E8F /* AppDelegate.swift in Sources */,
 				F0724054245950B100937E8F /* ProfileViewController.swift in Sources */,
 				F0724052245950A300937E8F /* SignUpViewController.swift in Sources */,
+				F06AEA01245EA1FB00875DB5 /* Validators.swift in Sources */,
 				F072404024594FCE00937E8F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

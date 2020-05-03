@@ -28,11 +28,15 @@ class SignUpViewController: UIViewController {
             print("passwordTextField")
         }
     }
-
+    @IBOutlet weak var registerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#function)
         photoImageView.layer.cornerRadius = photoImageView.frame.width / 2
+        
+        registerButton.isEnabled = false
+        registerButton.alpha = 0.3
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,6 +70,25 @@ class SignUpViewController: UIViewController {
         self.firstnameTextField.text = sourceVC.firstnameTextField.text
         self.lastnameTextField.text = sourceVC.lastnameTextField.text
     }
+    
+    @IBAction func textFieldsChanged(_ sender: Any) {
+        guard Validators.isFilled(firstname: firstnameTextField.text,
+                                  lastname: lastnameTextField.text,
+                                  email: emailTextField.text,
+                                  password: passwordTextField.text) else {
+                                    registerButton.isEnabled = false
+                                    registerButton.alpha = 0.3
+                                    return }
+        
+        guard Validators.isSimpleEmail(emailTextField.text!) else {
+            registerButton.isEnabled = false
+            registerButton.alpha = 0.3
+            return }
+        
+        registerButton.isEnabled = true
+        registerButton.alpha = 1
+    }
+    
 }
 
 extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
