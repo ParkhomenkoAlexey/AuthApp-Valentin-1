@@ -27,10 +27,25 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func changeInfoTapped(_ sender: Any) {
+        performSegue(withIdentifier: "myUnwindSegue", sender: nil)
     }
     
 
     @IBAction func shareButtonTapped(_ sender: UIButton) {
+        let items = "1. Молоко\n2. Кефир"
+        guard let image = photoImageView.image else { return }
+        let shareController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        shareController.completionWithItemsHandler = { _, bool, _, _ in
+            if bool {
+                print("Успешно!")
+            } else {
+                ///.....что-то другое, ошибка
+            }
+        }
+        
+        shareController.popoverPresentationController?.sourceView = sender
+        present(shareController, animated: true)
+        
     }
 }
 

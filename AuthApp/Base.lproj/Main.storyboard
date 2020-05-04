@@ -180,7 +180,6 @@
                                         </state>
                                         <connections>
                                             <action selector="changeInfoTapped:" destination="M2b-Qj-2GV" eventType="touchUpInside" id="sxk-TE-V7v"/>
-                                            <segue destination="blK-pK-jlf" kind="unwind" unwindAction="unwindSegueToMainScreenWithSegue:" id="nJr-7F-LQC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -203,6 +202,7 @@
                         <outlet property="firstnameTextField" destination="Zvd-kD-Htb" id="KWK-jg-eBG"/>
                         <outlet property="lastnameTextField" destination="ndz-pV-xTb" id="1ld-HP-ca3"/>
                         <outlet property="photoImageView" destination="dLB-Zy-nZN" id="960-jV-5rS"/>
+                        <segue destination="blK-pK-jlf" kind="unwind" identifier="myUnwindSegue" unwindAction="unwindSegueToMainScreenWithSegue:" id="cD7-hH-DC5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAX-1o-pw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

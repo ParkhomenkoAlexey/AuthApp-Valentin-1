@@ -35,8 +35,8 @@ class SignUpViewController: UIViewController {
         print(#function)
         photoImageView.layer.cornerRadius = photoImageView.frame.width / 2
         
-        registerButton.isEnabled = false
-        registerButton.alpha = 0.3
+//        registerButton.isEnabled = false
+//        registerButton.alpha = 0.3
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,29 +66,37 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
-        guard let sourceVC = segue.source as? ProfileViewController else { return }
-        self.firstnameTextField.text = sourceVC.firstnameTextField.text
-        self.lastnameTextField.text = sourceVC.lastnameTextField.text
+        
+        switch segue.identifier {
+        case "myUnwindSegue":
+            guard let sourceVC = segue.source as? ProfileViewController else { return }
+            self.firstnameTextField.text = sourceVC.firstnameTextField.text
+            self.lastnameTextField.text = sourceVC.lastnameTextField.text
+        case "toAnotherVC":
+            print("anotherVC")
+        default:
+            break
+        }
     }
     
     @IBAction func textFieldsChanged(_ sender: Any) {
-        guard Validators.isFilled(firstname: firstnameTextField.text,
-                                  lastname: lastnameTextField.text,
-                                  email: emailTextField.text,
-                                  password: passwordTextField.text) else {
-                                    registerButton.isEnabled = false
-                                    registerButton.alpha = 0.3
-                                    return }
         
-        guard Validators.isSimpleEmail(emailTextField.text!) else {
-            registerButton.isEnabled = false
-            registerButton.alpha = 0.3
-            return }
-        
-        registerButton.isEnabled = true
-        registerButton.alpha = 1
+//        guard Validators.isFilled(firstname: firstnameTextField.text,
+//                                  lastname: lastnameTextField.text,
+//                                  email: emailTextField.text,
+//                                  password: passwordTextField.text) else {
+//                                    registerButton.isEnabled = false
+//                                    registerButton.alpha = 0.3
+//                                    return }
+//
+//        guard Validators.isSimpleEmail(emailTextField.text!) else {
+//            registerButton.isEnabled = false
+//            registerButton.alpha = 0.3
+//            return }
+//
+//        registerButton.isEnabled = true
+//        registerButton.alpha = 1
     }
-    
 }
 
 extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
