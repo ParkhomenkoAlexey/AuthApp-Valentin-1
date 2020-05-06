@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F030A43A24608CC700036FF7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F030A43924608CC700036FF7 /* MainTabBarController.swift */; };
+		F030A43C24608D1000036FF7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F030A43B24608D1000036FF7 /* SearchViewController.swift */; };
 		F06AEA01245EA1FB00875DB5 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AEA00245EA1FB00875DB5 /* Validators.swift */; };
 		F072403E24594FCE00937E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F072403D24594FCE00937E8F /* AppDelegate.swift */; };
 		F072404024594FCE00937E8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F072403F24594FCE00937E8F /* SceneDelegate.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F030A43924608CC700036FF7 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		F030A43B24608D1000036FF7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F06AEA00245EA1FB00875DB5 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		F072403A24594FCE00937E8F /* AuthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F072403D24594FCE00937E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				F072403D24594FCE00937E8F /* AppDelegate.swift */,
 				F072403F24594FCE00937E8F /* SceneDelegate.swift */,
 				F0724051245950A300937E8F /* SignUpViewController.swift */,
+				F030A43924608CC700036FF7 /* MainTabBarController.swift */,
+				F030A43B24608D1000036FF7 /* SearchViewController.swift */,
 				F0724053245950B100937E8F /* ProfileViewController.swift */,
 				F06AEA00245EA1FB00875DB5 /* Validators.swift */,
 				F072404324594FCE00937E8F /* Main.storyboard */,
@@ -145,7 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F072403E24594FCE00937E8F /* AppDelegate.swift in Sources */,
+				F030A43C24608D1000036FF7 /* SearchViewController.swift in Sources */,
 				F0724054245950B100937E8F /* ProfileViewController.swift in Sources */,
+				F030A43A24608CC700036FF7 /* MainTabBarController.swift in Sources */,
 				F0724052245950A300937E8F /* SignUpViewController.swift in Sources */,
 				F06AEA01245EA1FB00875DB5 /* Validators.swift in Sources */,
 				F072404024594FCE00937E8F /* SceneDelegate.swift in Sources */,

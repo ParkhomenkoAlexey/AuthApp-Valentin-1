@@ -79,6 +79,13 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    @IBAction func registerTapped(_ sender: Any) {
+        let mainTabBarController = MainTabBarController()
+        mainTabBarController.modalPresentationStyle = .fullScreen
+        present(mainTabBarController, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func textFieldsChanged(_ sender: Any) {
         
 //        guard Validators.isFilled(firstname: firstnameTextField.text,
