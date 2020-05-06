@@ -30,7 +30,6 @@ class ProfileViewController: UIViewController {
         performSegue(withIdentifier: "myUnwindSegue", sender: nil)
     }
     
-
     @IBAction func shareButtonTapped(_ sender: UIButton) {
         let items = "1. Молоко\n2. Кефир"
         guard let image = photoImageView.image else { return }

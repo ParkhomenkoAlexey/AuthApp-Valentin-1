@@ -60,9 +60,7 @@ class SignUpViewController: UIViewController {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         imagePickerController.sourceType = .photoLibrary
-        present(imagePickerController, animated: true) {
-            print("12345")
-        }
+        present(imagePickerController, animated: true)
     }
     
     @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {

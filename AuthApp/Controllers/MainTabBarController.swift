@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
@@ -33,6 +32,4 @@ class MainTabBarController: UITabBarController {
         navigationVC.navigationBar.prefersLargeTitles = true
         return navigationVC
     }
-    
-    
 }
