@@ -23,6 +23,13 @@ class SearchViewController: UIViewController {
         setupSearchBar()
         setupElements()
         setupConstraints()
+        
+        let urlString = "https://itunes.apple.com/search?term=Queen&limit=10"
+        self.networkDataFetcher.fetchTracks(urlString: urlString) { (searchResponse) in
+            guard let searchResponse = searchResponse else { return }
+            self.searchResponse = searchResponse
+            self.table.reloadData()
+        }
     }
 }
 
@@ -31,13 +38,16 @@ extension SearchViewController {
     private func setupSearchBar() {
         navigationItem.searchController = searchController
         searchController.searchBar.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
     }
     
     func setupElements() {
         title = "Search"
         view.backgroundColor = .systemBackground
         table.translatesAutoresizingMaskIntoConstraints = false
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
+        let nib = UINib(nibName: "TrackCell", bundle: nil)
+        table.register(nib, forCellReuseIdentifier: TrackCell.reuseId)
         table.delegate = self
         table.dataSource = self
     }
@@ -54,7 +64,6 @@ extension SearchViewController {
             table.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             table.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        
     }
 }
 
@@ -65,10 +74,14 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TrackCell.reuseId, for: indexPath) as! TrackCell
         let track = searchResponse?.results[indexPath.row]
-        cell.textLabel?.text = track?.trackName
+        cell.setup(track: track)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 84
     }
 }
 
