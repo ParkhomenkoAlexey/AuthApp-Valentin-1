@@ -56,3 +56,34 @@ extension ProfileViewController: UINavigationControllerDelegate, UIImagePickerCo
         picker.dismiss(animated: true, completion: nil)
     }
 }
+
+// MARK: - SwiftUI
+import SwiftUI
+
+struct ProfileVCProvider: PreviewProvider {
+    static var previews: some View {
+        Group {
+            Group {
+                ContainerView().edgesIgnoringSafeArea(.all)
+                    .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro"))
+                    .previewDisplayName("iPhone 11 Pro")
+                
+                ContainerView().edgesIgnoringSafeArea(.all)
+                    .previewDevice(PreviewDevice(rawValue: "iPhone 7"))
+                    .previewDisplayName("iPhone 7")
+            }
+        }
+    }
+    
+    struct ContainerView: UIViewControllerRepresentable {
+        
+        let viewController = MainTabBarController()
+        
+        func makeUIViewController(context: UIViewControllerRepresentableContext<ProfileVCProvider.ContainerView>) -> MainTabBarController {
+            return viewController
+        }
+        func updateUIViewController(_ uiViewController: ProfileVCProvider.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<ProfileVCProvider.ContainerView>) {
+            
+        }
+    }
+}

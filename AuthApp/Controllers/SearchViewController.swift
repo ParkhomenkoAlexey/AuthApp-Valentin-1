@@ -86,6 +86,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let trackViewController = TrackViewController()
+        trackViewController.modalPresentationStyle = .fullScreen
         present(trackViewController, animated: true, completion: nil)
     }
 }
@@ -103,5 +104,36 @@ extension SearchViewController: UISearchBarDelegate {
                 self.table.reloadData()
             }
         })
+    }
+}
+
+// MARK: - SwiftUI
+import SwiftUI
+
+struct SearchVCProvider: PreviewProvider {
+    static var previews: some View {
+        Group {
+            Group {
+                ContainerView().edgesIgnoringSafeArea(.all)
+                    .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro"))
+                    .previewDisplayName("iPhone 11 Pro")
+                
+                ContainerView().edgesIgnoringSafeArea(.all)
+                    .previewDevice(PreviewDevice(rawValue: "iPhone 7"))
+                    .previewDisplayName("iPhone 7")
+            }
+        }
+    }
+    
+    struct ContainerView: UIViewControllerRepresentable {
+        
+        let viewController = MainTabBarController()
+        
+        func makeUIViewController(context: UIViewControllerRepresentableContext<SearchVCProvider.ContainerView>) -> MainTabBarController {
+            return viewController
+        }
+        func updateUIViewController(_ uiViewController: SearchVCProvider.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<SearchVCProvider.ContainerView>) {
+            
+        }
     }
 }
