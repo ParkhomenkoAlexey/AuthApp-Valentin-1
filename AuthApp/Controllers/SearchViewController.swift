@@ -83,6 +83,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 84
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let trackViewController = TrackViewController()
+        present(trackViewController, animated: true, completion: nil)
+    }
 }
 
 // MARK: - UISearchBarDelegate

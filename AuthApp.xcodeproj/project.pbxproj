@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		F06AEA01245EA1FB00875DB5 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AEA00245EA1FB00875DB5 /* Validators.swift */; };
 		F06E32BF2469B79A0035F702 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06E32BE2469B79A0035F702 /* TrackCell.xib */; };
 		F06E32C22469B8EC0035F702 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E32C12469B8EC0035F702 /* TrackCell.swift */; };
+		F06E32C42469C8090035F702 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E32C32469C8090035F702 /* TrackViewController.swift */; };
 		F072403E24594FCE00937E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F072403D24594FCE00937E8F /* AppDelegate.swift */; };
 		F072404024594FCE00937E8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F072403F24594FCE00937E8F /* SceneDelegate.swift */; };
 		F072404524594FCE00937E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F072404324594FCE00937E8F /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		F06AEA00245EA1FB00875DB5 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		F06E32BE2469B79A0035F702 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		F06E32C12469B8EC0035F702 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		F06E32C32469C8090035F702 /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
 		F072403A24594FCE00937E8F /* AuthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F072403D24594FCE00937E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F072403F24594FCE00937E8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +76,6 @@
 				F606FA2145B7AB01919AB7B1 /* Pods-AuthApp.debug.xcconfig */,
 				09279F34A4DA28DC3EFA64AB /* Pods-AuthApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -129,6 +130,7 @@
 				F0724051245950A300937E8F /* SignUpViewController.swift */,
 				F030A43924608CC700036FF7 /* MainTabBarController.swift */,
 				F030A43B24608D1000036FF7 /* SearchViewController.swift */,
+				F06E32C32469C8090035F702 /* TrackViewController.swift */,
 				F0724053245950B100937E8F /* ProfileViewController.swift */,
 			);
 			path = Controllers;
@@ -284,6 +286,7 @@
 				F030A43A24608CC700036FF7 /* MainTabBarController.swift in Sources */,
 				F0724052245950A300937E8F /* SignUpViewController.swift in Sources */,
 				F06AEA01245EA1FB00875DB5 /* Validators.swift in Sources */,
+				F06E32C42469C8090035F702 /* TrackViewController.swift in Sources */,
 				F072404024594FCE00937E8F /* SceneDelegate.swift in Sources */,
 				F09D99D2246332B7001319F8 /* SearchResponse.swift in Sources */,
 			);
